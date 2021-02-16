@@ -826,6 +826,9 @@ export function not(input: any): boolean;
 export function nth<T>(index: number, list: readonly T[]): T | undefined;	
 export function nth(index: number): <T>(list: readonly T[]) => T | undefined;
 
+export function objOf<T, K extends string>(key: K, value: T): Record<K, T>;
+export function objOf<T, K extends string>(key: K): (value: T) => Record<K, T>;
+
 /**
  * It returns a function, which invokes only once `fn` function.
  */
